@@ -1,5 +1,4 @@
 import React from "react";
-import handleDelete from "./App.jsx"
 
 function ProductList({ funcion ,products }) {
   if (products.length === 0) {
@@ -15,7 +14,7 @@ function ProductList({ funcion ,products }) {
           <li key={product.id}>
             <img src={product.image} alt={product.title} style={{ width: "100px" }} />
             <p>{product.title}</p>
-            <button onClick={funcion}>Elminar</button>
+            <button onClick={()=>funcion(product.id)}>Elminar</button>
           </li>
         ))}
       </ul>

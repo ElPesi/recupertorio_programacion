@@ -41,6 +41,7 @@ function App() {
   }
   
   const handleDelete = (id) => {
+    console.log(id);
     axios.delete(`http://localhost:3000/products/${id}`)
       .then(() => {
         setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id));
